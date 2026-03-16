@@ -19,7 +19,9 @@
   }
 </script>
 
-<div class="book-card">
+<Card.Root>
+  <Card.Content>
+    <div class="book-card">
   <Carousel.Root class="w-full max-w-xs self-start">
     <Carousel.Content>
       {#each Array(5), i}
@@ -111,8 +113,9 @@
         </Accordion.Content>
       </Accordion.Item>
     </Accordion.Root>
-  </div>
-</div>
+    </div>
+  </Card.Content>
+</Card.Root>
 
 <style>
   .book-card {
