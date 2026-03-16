@@ -69,9 +69,10 @@
 
         <p class="total">Total: <strong>${total}.00</strong></p>
 
-        <a href="/checkout?quantity={quantity}"
-          ><Button>Proceed to Checkout</Button></a
-        >
+        <form method="POST" action="/checkout">
+          <input type="hidden" name="quantity" value={quantity} />
+          <Button type="submit">Proceed to Checkout</Button>
+        </form>
 
         <Accordion.Root type="single" class="w-full" value="item-1">
           <Accordion.Item value="item-1">
