@@ -144,7 +144,7 @@
     max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "PT Serif", Times, serif;
   }
 
   header {
@@ -162,7 +162,7 @@
 
   .book-card {
     display: flex;
-    gap: 4.5rem;
+    gap: 5.8rem;
     padding: 2rem;
   }
 
@@ -170,7 +170,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.9rem;
   }
 
   h2 {
