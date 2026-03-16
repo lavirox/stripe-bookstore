@@ -166,17 +166,6 @@
     padding: 2rem;
   }
 
-  .book-cover {
-    flex-shrink: 0;
-    width: 160px;
-    height: 220px;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
-  }
-
   .book-details {
     flex: 1;
     display: flex;
@@ -219,23 +208,6 @@
     gap: 0.75rem;
   }
 
-  .quantity-controls button {
-    width: 32px;
-    height: 32px;
-    border: 1px solid #c8a96e;
-    background: white;
-    border-radius: 4px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .quantity-controls button:hover {
-    background: #f5e6cc;
-  }
-
   .quantity-controls span {
     font-size: 1.2rem;
     min-width: 24px;
@@ -248,21 +220,6 @@
     margin: 0;
   }
 
-  .checkout-btn {
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background: #2d6a4f;
-    color: white;
-    border-radius: 6px;
-    font-size: 1rem;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  .checkout-btn:hover {
-    background: #1b4332;
-  }
 
   @media (max-width: 600px) {
     .book-card {
