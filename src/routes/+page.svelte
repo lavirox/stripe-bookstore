@@ -22,99 +22,102 @@
 <Card.Root>
   <Card.Content>
     <div class="book-card">
-  <Carousel.Root class="w-full max-w-xs self-start">
-    <Carousel.Content>
-      {#each Array(5), i}
-        <Carousel.Item class="md:basis-1/1">
-          <div class="p-1">
-            <Card.Root>
-              <Card.Content
-                class="flex h-96 items-center justify-center p-6"
-              >
-                <span class="text-4xl font-semibold">{i + 1}</span>
-              </Card.Content>
-            </Card.Root>
+      <Carousel.Root class="w-full max-w-xs self-start">
+        <Carousel.Content>
+          {#each Array(5), i}
+            <Carousel.Item class="md:basis-1/1">
+              <div class="p-1">
+                <Card.Root>
+                  <Card.Content
+                    class="flex h-96 items-center justify-center p-6"
+                  >
+                    <span class="text-4xl font-semibold">{i + 1}</span>
+                  </Card.Content>
+                </Card.Root>
+              </div>
+            </Carousel.Item>
+          {/each}
+        </Carousel.Content>
+        <Carousel.Previous />
+        <Carousel.Next />
+      </Carousel.Root>
+
+      <div class="book-details">
+        <h2>National Parks</h2>
+        <p class="description">
+          Wildlife experts document the rich biodiversity throughout
+          California's national parks. A must-have guide for any prospective
+          visitor.
+        </p>
+        <p class="price">${price}.00</p>
+
+        <div class="quantity-row">
+          <label for="quantity">Quantity:</label>
+          <div class="quantity-controls">
+            <Button onclick={decrement} aria-label="Decrease quantity">−</Button
+            >
+            <span id="quantity">{quantity}</span>
+            <Button onclick={increment} aria-label="Increase quantity">+</Button
+            >
           </div>
-        </Carousel.Item>
-      {/each}
-    </Carousel.Content>
-    <Carousel.Previous />
-    <Carousel.Next />
-  </Carousel.Root>
+        </div>
 
-  <div class="book-details">
-    <h2>National Parks</h2>
-    <p class="description">
-      Wildlife experts document the rich biodiversity throughout
-      California's national parks. A must-have guide for any prospective
-      visitor.
-    </p>
-    <p class="price">${price}.00</p>
+        <p class="total">Total: <strong>${total}.00</strong></p>
 
-    <div class="quantity-row">
-      <label for="quantity">Quantity:</label>
-      <div class="quantity-controls">
-        <Button onclick={decrement} aria-label="Decrease quantity">−</Button>
-        <span id="quantity">{quantity}</span>
-        <Button onclick={increment} aria-label="Increase quantity">+</Button>
+        <form method="POST" action="/checkout">
+          <input type="hidden" name="quantity" value={quantity} />
+          <Button type="submit">Proceed to Checkout</Button>
+        </form>
+
+        <Accordion.Root type="single" class="w-full" value="item-1">
+          <Accordion.Item value="item-1">
+            <Accordion.Trigger>Product Information</Accordion.Trigger>
+            <Accordion.Content class="flex flex-col gap-4">
+              <p>
+                Our flagship product combines thoughtful craftsmanship with
+                sleek design. Built with premium materials, it offers
+                unparalleled performance and reliability.
+              </p>
+              <p>
+                Key features include advanced processing capabilities, and an
+                intuitive user interface designed for both beginners and
+                experts.
+              </p>
+            </Accordion.Content>
+          </Accordion.Item>
+          <Accordion.Item value="item-2">
+            <Accordion.Trigger>Shipping Details</Accordion.Trigger>
+            <Accordion.Content class="flex flex-col gap-4">
+              <p>
+                We offer worldwide shipping through trusted courier partners.
+                Standard delivery takes 3-5 business days, while express
+                shipping ensures delivery within 1-2 business days.
+              </p>
+              <p>
+                All orders are carefully packaged and fully insured. Track your
+                shipment in real-time through our dedicated tracking portal.
+              </p>
+            </Accordion.Content>
+          </Accordion.Item>
+          <Accordion.Item value="item-3">
+            <Accordion.Trigger>Return Policy</Accordion.Trigger>
+            <Accordion.Content class="flex flex-col gap-4">
+              <p>
+                We stand behind our products with a comprehensive 30-day return
+                policy. If you&apos;re not completely satisfied, simply return
+                the item in its original condition.
+              </p>
+              <p>
+                Our hassle-free return process includes free return shipping and
+                full refunds processed within 48 hours of receiving the returned
+                item.
+              </p>
+            </Accordion.Content>
+          </Accordion.Item>
+        </Accordion.Root>
       </div>
-    </div>
-
-    <p class="total">Total: <strong>${total}.00</strong></p>
-
-    <form method="POST" action="/checkout">
-      <input type="hidden" name="quantity" value={quantity} />
-      <Button type="submit">Proceed to Checkout</Button>
-    </form>
-
-    <Accordion.Root type="single" class="w-full" value="item-1">
-      <Accordion.Item value="item-1">
-        <Accordion.Trigger>Product Information</Accordion.Trigger>
-        <Accordion.Content class="flex flex-col gap-4">
-          <p>
-            Our flagship product combines cutting-edge technology with sleek
-            design. Built with premium materials, it offers unparalleled
-            performance and reliability.
-          </p>
-          <p>
-            Key features include advanced processing capabilities, and an
-            intuitive user interface designed for both beginners and
-            experts.
-          </p>
-        </Accordion.Content>
-      </Accordion.Item>
-      <Accordion.Item value="item-2">
-        <Accordion.Trigger>Shipping Details</Accordion.Trigger>
-        <Accordion.Content class="flex flex-col gap-4">
-          <p>
-            We offer worldwide shipping through trusted courier partners.
-            Standard delivery takes 3-5 business days, while express
-            shipping ensures delivery within 1-2 business days.
-          </p>
-          <p>
-            All orders are carefully packaged and fully insured. Track your
-            shipment in real-time through our dedicated tracking portal.
-          </p>
-        </Accordion.Content>
-      </Accordion.Item>
-      <Accordion.Item value="item-3">
-        <Accordion.Trigger>Return Policy</Accordion.Trigger>
-        <Accordion.Content class="flex flex-col gap-4">
-          <p>
-            We stand behind our products with a comprehensive 30-day return
-            policy. If you&apos;re not completely satisfied, simply return
-            the item in its original condition.
-          </p>
-          <p>
-            Our hassle-free return process includes free return shipping and
-            full refunds processed within 48 hours of receiving the returned
-            item.
-          </p>
-        </Accordion.Content>
-      </Accordion.Item>
-    </Accordion.Root>
-    </div>
-  </Card.Content>
+    </div></Card.Content
+  >
 </Card.Root>
 
 <style>
