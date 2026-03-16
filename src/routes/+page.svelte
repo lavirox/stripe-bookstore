@@ -121,7 +121,7 @@
   .book-card {
     display: flex;
     gap: 5.8rem;
-    padding: 2rem;
+    padding: 3rem;
   }
 
   .book-details {
