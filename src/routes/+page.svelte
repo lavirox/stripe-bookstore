@@ -76,7 +76,7 @@
         <Accordion.Root type="single" class="w-full" value="item-1">
           <Accordion.Item value="item-1">
             <Accordion.Trigger>Product Information</Accordion.Trigger>
-            <Accordion.Content class="flex flex-col gap-4 text-balance">
+            <Accordion.Content class="flex flex-col gap-4">
               <p>
                 Our flagship product combines cutting-edge technology with sleek
                 design. Built with premium materials, it offers unparalleled
@@ -91,7 +91,7 @@
           </Accordion.Item>
           <Accordion.Item value="item-2">
             <Accordion.Trigger>Shipping Details</Accordion.Trigger>
-            <Accordion.Content class="flex flex-col gap-4 text-balance">
+            <Accordion.Content class="flex flex-col gap-4">
               <p>
                 We offer worldwide shipping through trusted courier partners.
                 Standard delivery takes 3-5 business days, while express
@@ -105,7 +105,7 @@
           </Accordion.Item>
           <Accordion.Item value="item-3">
             <Accordion.Trigger>Return Policy</Accordion.Trigger>
-            <Accordion.Content class="flex flex-col gap-4 text-balance">
+            <Accordion.Content class="flex flex-col gap-4">
               <p>
                 We stand behind our products with a comprehensive 30-day return
                 policy. If you&apos;re not completely satisfied, simply return
